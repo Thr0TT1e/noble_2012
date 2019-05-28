@@ -2,128 +2,21 @@
 @import "fonts"
 @import "libs"
 @import "btn"
+@import "normalize"
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
-*
-	box-sizing: border-box
-	&::after, &::before
-		box-sizing: inherit
+.grid-items
+  border: 1px solid black
 
 body
-	font-size: 16px
-	background: $fon-grey
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
-	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		padding: 0 5px
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+  max-width: 1280px
+  width: 100%
+  margin: auto
 
-.main-head
-	//min-height: 100vh
-
-.grid
-	display: grid
-
-.top-line
-	grid-template-columns: repeat(2, 1fr)
-	//grid-template-rows: auto
-
-.logo
-	align-items: center
-	justify-content: start
-	margin-left: 50px
-
-.right-menu
-	align-self: center
-	justify-items: end
-	margin-right: 50px
-
-.social-icon
-	font-size: 1.5em
-
-.social
-	color: $accent
-	padding-right: 10px
-	&:hover
-		color: lighten($accent, 20%)
-	&:active
-		color: darken($accent, 20%)
-
-input
-	margin: 5px 5px 10px 0
-	border-radius: 5px
-	background: $fon-grey
-	&:focus
-		border-color: $accent
-		border: 1px dashed $accent
-		background: lighten($accent, 35%)
-	&:hover
-		border: 1px solid $accent
-
-nav
-	grid-template-columns: repeat(7, 1fr)
-	grid-template-rows: 30px
-	//background: $text
-	color: white
-	justify-self: center
-	justify-items: center
-	margin-top: 30px
-	margin-bottom: $gutter
-
-.menu
-	background: $text
-	width: 140px
-	align-self: center
-	text-align: center
-	padding: 10px 20px
-	&:first-child
-		border-radius: 10px 0 0 10px
-	&:last-child
-		border-radius: 0 10px 10px 0
-	&:hover
-		background-color: lighten($text, 30%)
-	&:active
-		background-color: darken($accent, 15%)
-
-a
-	color: white
-	font-weight: bold
-	&:hover
-		color: white
-		text-decoration: none
-
-// .slider
-// 	height: 350px
-// 	grid-template-columns: repeat(2, 1fr)
-// 	grid-template-rows: 1fr
-// 	grid-gap: $gutter
-
-// .img-slider
-// 	background: #6f42c1
-// 	justify-self: center
-// 	align-items: center
-
-// .text-slider
-// 	background: #00b3ee
-// 	justify-content: flex-start
-
-.main
-	background: #090909
+.general-container
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: repeat(8, 1fr)
+  grid-row-gap: 20px
 
 
 
